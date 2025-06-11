@@ -15,11 +15,16 @@ const app = express();
 
 
 // Middleware
+// Update your CORS middleware to this:
 app.use(cors({
-  origin: 'https://project-manager-client-0dli.onrender.com', // Replace with your frontend URL
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Add other methods if needed (e.g., 'PATCH')
-  allowedHeaders: ['Content-Type', 'Authorization'] // Optional
+  origin: ['https://project-manager-client-0dli.onrender.com'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
 }));
+
+// Handle preflight requests
+app.options('*', cors());
 app.use(express.json());
 
 // Routes
