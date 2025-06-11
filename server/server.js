@@ -15,7 +15,11 @@ const app = express();
 
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'https://project-manager-client-0dli.onrender.com', // Replace with your frontend URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Add other methods if needed (e.g., 'PATCH')
+  allowedHeaders: ['Content-Type', 'Authorization'] // Optional
+}));
 app.use(express.json());
 
 // Routes
