@@ -17,7 +17,7 @@ const app = express();
 // Middleware
 // Update your CORS middleware to this:
 app.use(cors({
-  origin: ['https://project-client-frontend.netlify.app'],
+  origin: ['https://project-frontendclient.netlify.app'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
