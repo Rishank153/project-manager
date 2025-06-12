@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: process.env.REACT_APP_API_URL || 'https://project-client-frontend.netlify.app/',
+    baseURL: process.env.REACT_APP_API_URL || 'https://project-manager-3-l98j.onrender.com',
 });
 
 // Request Interceptor
